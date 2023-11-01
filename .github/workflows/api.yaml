@@ -14,15 +14,17 @@ jobs:
         run: "cd server && npm install && npm run build && zip -r deploy.zip *"
 
       - name: Deploy to EB
-        uses: einaregilsson/beanstalk-deploy@v20
+        uses: einaregilsson/beanstalk-deploy@v21
         with:
-          aws_access_key: AKIA35VTPTMRG2Z7AZHR
-          aws_secret_key: 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
-          application_name: aws-beanstalk-env
-          environment_name: aws-beanstalk
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          application_name: aws-beanstalk
+          environment_name: aws-beanstalk-env
           version_label: ${{ github.sha }}
-          region: us-west-1
+          region: us-west-2a
           deployment_package: ./server/deploy.zip
+
+
 
 
 
