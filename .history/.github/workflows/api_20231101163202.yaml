@@ -19,7 +19,7 @@ jobs:
           aws_access_key: AKIATBHO5RAE2FO5P4WN
           aws_secret_key: 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
           application_name: nodejsserver
-          environment_name: Nodejsserver-env
+          environment_name: aws-beanstalk-env
           version_label: ${{ github.sha }}
           region: us-west-2
           deployment_package: ./server/deployx.zip
