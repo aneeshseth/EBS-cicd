@@ -18,8 +18,8 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_EB_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_EB_SECRET_ACCESS_KEY }}
-          application_name: aws-beanstalk
-          environment_name: aws-beanstalk-env
+          application_name: trial
+          environment_name: Trial-env
           version_label: ${{ github.sha }}
           region: us-west-1
           deployment_package: ./server/deploy.zip
