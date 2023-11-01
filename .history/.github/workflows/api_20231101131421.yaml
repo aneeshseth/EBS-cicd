@@ -21,7 +21,7 @@ jobs:
           application_name: aws-beanstalk
           environment_name: aws-beanstalk-env
           version_label: ${{ github.sha }}
-          region: us-west-2
+          region: us-west-2a
           deployment_package: ./server/deploy.zip
 
 
